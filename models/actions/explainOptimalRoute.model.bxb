@@ -1,0 +1,15 @@
+action (explainOptimalRoute) {
+  type(Search)
+  description (Give User Optimal Route Choices)
+  collect {
+    input (directionRequested) {
+      type (DirectionRequested)
+      min (Optional) max (One)
+    }
+    input (stationRequested) {
+      type (StationRequested)
+      min (Optional) max (One)
+    }
+  }
+  output (OptimalRouteResult)
+}

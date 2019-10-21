@@ -1,0 +1,11 @@
+structure (Station) {
+  description (__DESCRIPTION__)
+  property (stationName) {
+    type (StationName)
+    min (Optional) max (One)
+  }
+  property (transportInfo) {
+    type(TransportInfo)
+    min (Optional) max (Many)
+  }
+}

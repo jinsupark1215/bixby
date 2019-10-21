@@ -1,0 +1,7 @@
+structure (OptimalRouteResult) {
+  description (the result of Optimal route)
+  property (__PROPERTY_NAME__) {
+    type (__PROPERTY_TYPE__)
+    min (Optional) max (One)
+  }
+}
