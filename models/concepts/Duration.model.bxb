@@ -1,0 +1,3 @@
+integer (Duration) {
+  description (__DESCRIPTION__)
+}

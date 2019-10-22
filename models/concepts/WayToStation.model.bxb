@@ -1,0 +1,19 @@
+structure (WayToStation) {
+  description (__DESCRIPTION__)
+  property (wayToStationName) {
+    type (WayToStationName)
+    min (Optional) max (One)
+  }
+  property (WayPointName) {
+    type (WayPointName)
+    min (Optional) max (One)
+  }
+  property (WayPointNumber) {
+    type (WayPointNumber)
+    min (Optional) max (One)
+  }
+  property (wayPointDuration) {
+    type (WayPointDuration)
+    min (Optional) max (One)
+  }
+}

@@ -1,0 +1,15 @@
+structure (ArrivalInfo) {
+  description (__DESCRIPTION__)
+  property (arrivalTime) { 
+    type (ArrivalTime)
+    min (Optional) max (One)
+  }
+  property (arrivalColor) { 
+    type (ArrivalColor)
+    min (Optional) max (One)
+  }
+  property (arrivalTimeLeft ) { 
+    type (ArrivalTimeLeft)
+    min (Optional) max (One)
+  }
+}

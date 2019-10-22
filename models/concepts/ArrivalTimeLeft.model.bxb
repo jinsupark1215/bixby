@@ -1,0 +1,3 @@
+integer (ArrivalTimeLeft) {
+  description (__DESCRIPTION__)
+}

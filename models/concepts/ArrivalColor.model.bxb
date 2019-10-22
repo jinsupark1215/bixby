@@ -1,0 +1,6 @@
+enum (ArrivalColor) {
+  description (__DESCRIPTION__)
+  symbol (빨강)
+  symbol (녹색)
+  symbol (노랑)
+}

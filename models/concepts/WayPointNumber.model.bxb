@@ -1,0 +1,3 @@
+integer (WayPointNumber) {
+  description (__DESCRIPTION__)
+}

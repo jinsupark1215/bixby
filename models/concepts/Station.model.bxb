@@ -4,8 +4,8 @@ structure (Station) {
     type (StationName)
     min (Optional) max (One)
   }
-  property (transportInfo) {
-    type(TransportInfo)
+  property (arrivalInfo) {
+    type(ArrivalInfo)
     min (Optional) max (Many)
   }
 }

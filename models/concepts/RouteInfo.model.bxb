@@ -1,0 +1,15 @@
+structure (RouteInfo) {
+  description (__DESCRIPTION__)
+  property (duration) {
+    type (Duration)
+    min (Optional) max (One)
+  }
+  property (wayToStation) {
+    type (WayToStation)
+    min (Optional) max (One)
+  }
+  property (userArrivalTime) {
+    type (UserArrivalTime)
+    min (Optional) max (One)
+  }
+}
