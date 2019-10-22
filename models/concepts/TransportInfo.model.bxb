@@ -1,6 +1,6 @@
 structure (TransportInfo) {
   description (__DESCRIPTION__)
-  property (TransportArrivalTime) {
+  property (TransportArrivalTime) { 
     type (__PROPERTY_TYPE__)
     min (Optional) max (One)
   }
