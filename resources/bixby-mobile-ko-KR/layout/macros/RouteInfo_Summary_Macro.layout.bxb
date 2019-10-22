@@ -1,0 +1,19 @@
+layout-macro-def (routeInfo_summary) {
+  params {
+    param (route) {
+      type (RouteInfo)
+      min (Required) max (One)
+    }
+  }
+  content {
+    cell-card {
+      slot2 {
+          content {
+              order (PrimarySecondary)
+              primary ("#{value(route.name)}")
+              secondary ("위치: #{value(route.location)}")
+          }
+        }
+     }
+  }
+}
