@@ -16,23 +16,23 @@ result-view {
   render {
     // 어떻게 화면을 그릴 것인가에 대하여 설정
     // 결과 값 갯수에 따라 다르게 보여줌
-    // if (size(this) == 1) {
-    //   layout-macro (Route_details) {
-    //     param (route) { // StoreInfo_Details_Macro.layout.bxb의 param명을 기입
-    //       expression (this) // 결과 객체를 layout으로 전달
-    //     }
-    //   }    
-    // }else {
-    //   list-of (this) {
-    //     where-each (route) {
-    //       layout-macro (RouteInfo_summary) {
-    //         param (route) { // StoreInfo_Summary_Macro.layout.bxb의 param명을 기입
-    //           expression (route) // 결과 객체들중 하나를 layout으로 전달
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
+    if (size(this) == 1) {
+      layout-macro (Route_details) {
+        param (route) { // StoreInfo_Details_Macro.layout.bxb의 param명을 기입
+          expression (this) // 결과 객체를 layout으로 전달
+        }
+      }    
+    }else {
+      list-of (this) {
+        where-each (route) {
+          layout-macro (RouteInfo_summary) {
+            param (route) { // StoreInfo_Summary_Macro.layout.bxb의 param명을 기입
+              expression (route) // 결과 객체들중 하나를 layout으로 전달
+            }
+          }
+        }
+      }
+    }
   }
   
   // 결과 화면 하단에 다음에 이어질 수 있는 발화를 보여줌(https://bixbydevelopers.com/dev/docs/dev-guide/developers/enhancing-UX.conversation-drivers)
