@@ -4,11 +4,11 @@ structure (WayToStation) {
     type (WayToStationName)
     min (Optional) max (One)
   }
-  property (WayPointName) {
+  property (wayPointName) {
     type (WayPointName)
     min (Optional) max (One)
   }
-  property (WayPointNumber) {
+  property (wayPointNumber) {
     type (WayPointNumber)
     min (Optional) max (One)
   }
