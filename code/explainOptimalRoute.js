@@ -1,15 +1,12 @@
-
-var tool = require("lib/apiTool.js")
-
 module.exports.function = function explainOptimalRoute (directionRequested, stationRequested) {
 
   const console = require('console')
-  console.log(tool.getGiocode("역삼"))
+  console.log('ahha')
 
 
   
 
-  return 'test' ;
+  return 'hi'
   
 
   var routeInfo = []
