@@ -7,7 +7,7 @@ module.exports.function = function explainOptimalRoute (directionRequested, stat
   
 
   return 'hi'
-
+  
 
   var routeInfo = []
   
