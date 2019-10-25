@@ -1,12 +1,12 @@
 capsule-info {
-  display-name (지하철인포)
+  display-name (알지)
   search-keywords {
-    keyword (지하철인포)
+    keyword (알지)
   }
-  developer-name (지하철인포)
+  developer-name (알지)
   icon-asset (/img/bixby_launcher.png)
-  description ("가까운 지하철 역의 도착 정보 및 시간알리미입니다.")
+  description ("지하철 역의 도착 정보 및 시간알리미입니다.")
   website-url (https://example.com/)
   terms-url (https://example.com/terms-of-use/)
-  dispatch-name (지하철인포)
+  dispatch-name (알지)
 }
