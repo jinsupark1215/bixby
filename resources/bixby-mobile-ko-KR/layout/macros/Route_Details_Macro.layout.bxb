@@ -1,6 +1,6 @@
 // 실제로 UI를 그리는 파일 (https://bixbydevelopers.com/dev/docs/dev-guide/developers/building-views.layout-macros)
 // Bixby에서 사용 가능 UI 리스트 (https://bixbydevelopers.com/dev/docs/reference/type/layout-macro-def.content)
-layout-macro-def (Route_details) {
+layout-macro-def (route_details) {
   params {
     param (route) {
       type (OptimalRouteResult)
@@ -8,13 +8,13 @@ layout-macro-def (Route_details) {
     }
   }
   content {
-    cell-area {
-      slot2 {
-          content {
-              order (PrimarySecondary)
-              primary ("#{value(route.name)}")
-              secondary ("위치: #{value(route.location)}")
-          }
+    title-area {
+            image{
+              url (img/subway.png)
+            }
+              // order (PrimarySecondary)
+              // primary ("#{value(route.name)}")
+              // secondary ("위치: #{value(route.location)}")
         }
      }
   }
