@@ -11,5 +11,5 @@ action (explainOptimalRoute) {
       min (Optional) max (One)
     }
   }
-  output (OptimalRouteResult)
+  output (ArrivalTime)
 }
