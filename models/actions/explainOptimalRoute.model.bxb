@@ -4,12 +4,22 @@ action (explainOptimalRoute) {
   collect {
     input (directionRequested) {
       type (DirectionRequested)
-      min (Optional) max (One)
+      min (Required) max (One)
     }
     input (stationRequested) {
       type (StationRequested)
-      min (Optional) max (One)
+      min (Required) max (One)
+    }
+    input (sourcePoint) {
+      type (SourcePoint)
+      min (Required) max (One)
+      default-init {
+        intent {
+          goal: SourcePoint
+          route: geo.CurrentLocation
+        }
+      }
     }
   }
-  output (ArrivalTime)
+  output (SourcePoint)
 }

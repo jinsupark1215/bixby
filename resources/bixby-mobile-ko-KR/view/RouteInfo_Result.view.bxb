@@ -21,7 +21,7 @@ result-view {
         param (route) { // StoreInfo_Details_Macro.layout.bxb의 param명을 기입
           expression (this) // 결과 객체를 layout으로 전달
         }
-      }    
+      }
     }else {
       list-of (this) {
         where-each (route) {

@@ -1,4 +1,4 @@
-module.exports.function = function explainOptimalRoute (directionRequested, stationRequested) {
+module.exports.function = function explainOptimalRoute (directionRequested, stationRequested, sourcePoint) {
 
   const console = require('console')
   console.log('ahha')
@@ -6,7 +6,7 @@ module.exports.function = function explainOptimalRoute (directionRequested, stat
 
   
 
-  return 'hi'
+  return sourcePoint
   
 
   var routeInfo = []
