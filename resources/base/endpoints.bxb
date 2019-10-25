@@ -1,6 +1,6 @@
 endpoints {
   action-endpoints {
-    Uncomment the lines below and enter the information for actions, inputs, and the appropriate local or remote endpoints
+    // Uncomment the lines below and enter the information for actions, inputs, and the appropriate local or remote endpoints
       action-endpoint (OptimalRouteResult) {
       accepted-inputs (directionRequested)
       accepted-inputs (stationRequested)

@@ -11,5 +11,26 @@ action (explainOptimalRoute) {
       min (Optional) max (One)
     }
   }
-  output (OptimalRouteResult)
+  output (OptimalRouteResult){
+    throws{
+      error (NoResult){
+        on-catch {
+          halt {
+            dialog {
+              template-macro (no_result)
+            }
+          }
+        }
+      }
+      unknown-error{
+        on-catch {
+          halt {
+            dialog {
+              template-macro (no_result)
+            }
+          }
+        }
+      }
+    }
+  }
 }
