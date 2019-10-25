@@ -1,4 +1,5 @@
 train (t-8euxn022wzvjznybm6mlrykpp) {
-  utterance (역삼역 강남방향 시간알려줘)
-  last-modified (1571878478840)
+  utterance ("[g:ArrivalTime] (역삼역)[v:StationRequested] (강남방향)[v:DirectionRequested] 시간알려줘")
+  plan (Y2BhUCvISaxML8ovzUvRK0nNyfFNDSlKzCsuyC8q0XMsKsosS8wJycxNZdDDoy61AiiZmedfUJKZm5gTlF9aksqgi0e9S2ZRanJJZn5eUGphaWpxSWoKgzYe5cEliaiKmRkYGZiAJAOQBkEIAPHBogA=)
+  last-modified (1571885923487)
 }

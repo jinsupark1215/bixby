@@ -1,7 +1,8 @@
 module.exports.function = function explainOptimalRoute (directionRequested, stationRequested) {
   var routeInfo = []
 
-  
+  console.log('haha')
+
 
   var wayToStation = {
     wayToStationName: wayToStationName,
