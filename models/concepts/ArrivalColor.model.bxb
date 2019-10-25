@@ -3,4 +3,7 @@ enum (ArrivalColor) {
   symbol (빨강)
   symbol (녹색)
   symbol (노랑)
+
+
+  
 }

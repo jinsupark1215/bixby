@@ -1,20 +1,21 @@
 module.exports.function = function explainOptimalRoute (directionRequested, stationRequested) {
-  var routeInfo = []
 
   console.log('haha')
 
 
+
+  var routeInfo = []
+  
   var wayToStation = {
     wayToStationName: wayToStationName,
     wayPointName: wayPointName,
     wayPointNumber: wayPointNumber,
     wayPointDuration: wayPointDuration
-
   }
 
   var curRouteInfo = {
     duration: duration,
-    wayToStation: wayToStation,
+    wayToStation: wayToStation, // 배열
     userArrivalTime: userArrivalTime
   }
   
@@ -28,11 +29,11 @@ module.exports.function = function explainOptimalRoute (directionRequested, stat
 
   var station = {
     stationName: stationName,
-    arrivalInfo: arrivalInfo
+    arrivalInfo: arrivalInfo // 배열
   }
 
   return {
     station: station,
-    routeInfo: routeInfo,
+    routeInfo: routeInfo, // 배열
   }
 }
