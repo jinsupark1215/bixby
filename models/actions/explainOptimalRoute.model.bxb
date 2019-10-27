@@ -21,5 +21,26 @@ action (explainOptimalRoute) {
       }
     }
   }
-  output (SourcePoint)
+  output (OptimalRouteResult){
+    throws{
+      error (NoResult){
+        on-catch {
+          halt {
+            dialog {
+              template-macro (no_result)
+            }
+          }
+        }
+      }
+      unknown-error{
+        on-catch {
+          halt {
+            dialog {
+              template-macro (no_result)
+            }
+          }
+        }
+      }
+    }
+  }
 }
