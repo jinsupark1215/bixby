@@ -11,7 +11,9 @@ module.exports.getGiocode= function(addr) {
             key:key
           }
         };
-       return http.getUrl("https://maps.googleapis.com/maps/api/geocode/json",options);     
+       var log= http.getUrl("https://maps.googleapis.com/maps/api/geocode/json",options); 
+       console.log("log",log);
+       return log    
 }
         
 module.exports.getInfo=function(start, end) {
@@ -23,6 +25,12 @@ module.exports.getInfo=function(start, end) {
             key :key
           }
         };
-        return http.getUrl("https: //maps.googleapis.com/maps/api/directions/json?origin=",options);
-    }      
+        var log = http.getUrl("https://maps.googleapis.com/maps/api/directions/json?",options);
+        console.log("log",log);
+        return log
 
+}      
+
+module.exports.processing=function(process){
+  return process.results[0].geometry.location;
+}
