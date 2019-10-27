@@ -3,11 +3,18 @@ module.exports.function = function explainOptimalRoute (directionRequested, stat
   const console = require('console')
   console.log('ahha')
 
-
+  var wayToStationName = '도보'
+  var wayPointName = '역삼역'
+  var wayPointDuration = 3
+  var wayPointNumber = '';
   
+  var duration = 3
+  var userArrivalTime = '12:00'
+  var arrivalTime = '12:03'
+  var arrivalColor = 'Green'
+  var arrivalTimeLeft = 6
 
-  return 'hi'
-  
+  var stationName = '역삼역'
 
   var routeInfo = []
   
@@ -26,11 +33,14 @@ module.exports.function = function explainOptimalRoute (directionRequested, stat
   
   routeInfo.push(curRouteInfo)
 
-  var arrivalInfo = {
+  var arrivalInfo = []
+  var curArrivalInfo = {
     arrivalTime: arrivalTime,
     arrivalColor: arrivalColor,
     arrivalTimeLeft: arrivalTimeLeft
   }
+
+  arrivalInfo.push(curArrivalInfo)
 
   var station = {
     stationName: stationName,
