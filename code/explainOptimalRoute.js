@@ -3,7 +3,7 @@ module.exports.function = function explainOptimalRoute (directionRequested, stat
   const console = require('console')
   console.log('ahha')
 
-  var wayToStationName = '도보'
+  var wayToStationName = 'img/walk.png'
   var wayPointName = '역삼역'
   var wayPointDuration = 3
   var wayPointNumber = '';

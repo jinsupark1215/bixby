@@ -10,42 +10,34 @@ layout-macro-def (RouteDetail) {
   content {
     section {
       content {
-        for-each (optimal.routeResult) {
-          title-card {
-            title-area {
-              halign (Start)
-                slot1 {
+        
+        for-each (optimal.routeInfo) { 
+          as(routeInfo) {
+            partitioned {
+              content {
+                single-line {
                   text {
-                    style (Title_S)
-                    value ("#{value(optimal.RouteResult)}")
+                    style (Title_XS)
+                    value ("도착 시간   #{value(routeInfo.userArrivalTime)}   남은 시간   #{value(routeInfo.duration)}")
                   }
                 }
-                slot2 {
-                  single-line {
-                    text {
-                      style (Title_XS)
-                      value ("From #{value(hotel.lowRate)}")
+                for-each (routeInfo.wayToStation) {
+                  as(wayToStation) {
+                    single-line {
+                      image {
+                        
+                      }
+                      text {
+                        style (Title_XS)
+                        value ("#{value(wayToStation.wayToStationName)}  #{value(wayToStation.wayPointDuration)}")
+                      } 
                     }
                   }
                 }
-                slot3 {
-                  single-line {
-                    text {
-                      style (Detail_M_Soft)
-                      value ("#{value(hotel.rating)} stars")
-                    }
-                  }
-                }
+              }
             }
           }
         }
-
-        // single-line {
-        //   text {
-        //     style (Detail_M)
-        //     value ("station Name : #{value(optimal.station.stationName)}")
-        //   }
-        // }
       }
     }
   }
