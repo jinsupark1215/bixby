@@ -22,7 +22,9 @@ module.exports.getInfo=function(start, end) {
           query: { 
             origin: start ,
             destination:end,
-            key :key
+            key :key,
+            mode:"transit",
+            departure_time:"now"
           }
         };
         var log = http.getUrl("https://maps.googleapis.com/maps/api/directions/json?",options);
@@ -31,6 +33,9 @@ module.exports.getInfo=function(start, end) {
 
 }      
 
-module.exports.processing=function(process){
-  return process.results[0].geometry.location;
+module.exports.getSubwayInfo=function(station){
+    
+    var log = http.getUrl("http://swopenapi.seoul.go.kr/api/subway/7a4e4c666c756c74333448716a7877/json/realtimeStationArrival/0/2/"+station,{format:"json"});
+    console.log("log",log);
+    return log
 }

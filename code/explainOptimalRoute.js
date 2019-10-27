@@ -5,13 +5,25 @@ var console = require('console')
 module.exports.function = function explainOptimalRoute (directionRequested, stationRequested, sourcePoint) {  
   
 
-  var giocode = tool.getGiocode("역삼역")
-  var location =""
-  if(giocode.status=="OK"){
-     location  = giocode.results[0].geometry.location
-  }
-  console.log("info",location);
 
+  var startLocation ={
+    lat : sourcePoint.point.latitude,
+    lng : sourcePoint.point.longitude
+  }
+  var giocode = tool.getGiocode(stationRequested);
+  var destLocation=""
+  if(giocode.status=="OK"){
+     destLocation  = giocode.results[0].geometry.location
+  }
+  var result = tool.getInfo(startLocation.lat+","+startLocation.lng, destLocation.lat+","+destLocation.lng);
+  console.log("RESULT",result);
+  if(stationRequested.charAt(stationRequested.length-1)=="역"){
+    stationRequested= stationRequested.substring(0,stationRequested.length-1);
+  }
+ 
+  console.log("stationname", stationRequested)
+  var stationInfo = tool.getSubwayInfo(stationRequested);
+  console.log("stationInfo",stationInfo)
   return "hi"
 
   var routeInfo = []
