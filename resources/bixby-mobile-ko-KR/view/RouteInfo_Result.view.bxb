@@ -6,7 +6,7 @@ result-view {
   
   render {
     layout{
-      layout-macro (route_Details_Macro){
+      layout-macro (StationDetail){
       param (optimal){
         expression (optimal)
       }
