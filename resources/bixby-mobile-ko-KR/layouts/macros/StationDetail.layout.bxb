@@ -6,9 +6,6 @@ layout-macro-def (StationDetail) {
       type (OptimalRouteResult)
       min (Required) max (One)
     }
-    param (color) {
-      type (ArrivalColor)
-    }
   }
   content {
     section {
