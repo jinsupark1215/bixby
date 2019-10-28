@@ -10,6 +10,9 @@ result-view {
       param (optimal){
         expression (optimal)
       }
+      param(color) {
+        expression (optimal.station.arrivalInfo[0].arrivalColor)
+      }
     }
       layout-macro (RouteDetail) {
         param (optimal) {
