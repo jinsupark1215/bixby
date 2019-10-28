@@ -18,9 +18,8 @@ layout-macro-def (StationDetail) {
               cell-area{
                 slot2{
                   content{
-                order (SecondaryPrimary)
-                primary("#{value(optimal.station.arrivalInfo[0].arrivalDirection)}")
-                
+                order (PrimarySecondary)
+                primary("#{value(optimal.station.arrivalInfo[0].arrivalDirection)}행 방향")
               }
                 }
               }

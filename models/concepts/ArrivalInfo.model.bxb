@@ -8,7 +8,7 @@ structure (ArrivalInfo) {
     type (ArrivalColor)
     min (Optional) max (One)
   }
-  property (arrivalTimeLeft ) { 
+  property (arrivalTimeLeft) { 
     type (ArrivalTimeLeft)
     min (Optional) max (One)
   }

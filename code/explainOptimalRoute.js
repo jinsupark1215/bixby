@@ -4,68 +4,34 @@ var console = require('console')
 
 
 module.exports.function = function explainOptimalRoute (inputLine, inputStation, sourcePoint) {  
-  var wayToStationName = 'img/walk.png'
-  var wayPointName = '역삼역'
-  var wayPointDuration = 3
-  var wayPointNumber = '';
-  
-  var duration = 3
-  var userArrivalTime = '12:00'
 
-  var stationName = '역삼역'
+  var startLocation ={
+    lat : sourcePoint.point.latitude,
+    lng : sourcePoint.point.longitude
+  }
+  var giocode = tool.getGiocode(inputStation);
+  var destLocation=""
+  if(giocode.status=="OK"){
+     destLocation  = giocode.results[0].geometry.location
+  }
 
+  var result = tool.getInfo(startLocation.lng,startLocation.lat,destLocation.lng,destLocation.lat);
+  console.log("RESULT",result);
+
+  if(inputStation.charAt(inputStation.length-1)=="역"){
+    inputStation= inputStation.substring(0,inputStation.length-1);
+  }
+
+  var stationInfo = tool.getSubwayInfo(inputStation);
+  console.log("stationInfo",stationInfo);
+  var realtimeArrivalList=[];
+  realtimeArrivalList= stationInfo.realtimeArrivalList;
+  var d= new Date();
+
+  d.setMinutes(d.getMinutes()+result.features[0].properties.totalTime);
   var routeInfo = {
-    duration: duration,
-    userArrivalTime: userArrivalTime
-  }
-
- 
-
-//진수 예 만든거
-  var arrivalInfo = []
-
- var arrivalDirection = '신도림행'
-  var nextStation = "강남"
-  var arrivalTime = '12:03'
-  var arrivalColor = 'img/warning_red.png'
-  var arrivalTimeLeft = 6
-
-  var curArrivalInfo = {
-    arrivalTime: arrivalTime,
-    arrivalColor: arrivalColor,
-    arrivalTimeLeft: arrivalTimeLeft,
-    arrivalDirection : arrivalDirection,
-    nextStation : nextStation
-  }
-  arrivalInfo.push(curArrivalInfo)
-
-   var arrivalDirection = '신도림행'
-  var nextStation = "강남"
-  var arrivalTime = '12:10'
-  var arrivalColor = 'img/warning_red.png'
-  var arrivalTimeLeft = 13
-
-  var curArrivalInfo = {
-    arrivalTime: arrivalTime,
-    arrivalColor: arrivalColor,
-    arrivalTimeLeft: arrivalTimeLeft,
-    arrivalDirection : arrivalDirection,
-    nextStation : nextStation
-  }
-  arrivalInfo.push(curArrivalInfo)
-
-   var arrivalDirection = '잠실행'
-  var nextStation = "선릉"
-  var arrivalTime = '12:05'
-  var arrivalColor = 'img/warning_red.png'
-  var arrivalTimeLeft = 8
-
-  var curArrivalInfo = {
-    arrivalTime: arrivalTime,
-    arrivalColor: arrivalColor,
-    arrivalTimeLeft: arrivalTimeLeft,
-    arrivalDirection : arrivalDirection,
-    nextStation : nextStation
+    duration : result.features[0].properties.totalTime+"분",
+    userArrivalTime : d.getHours() +":"+d.getMinutes()+":"+d.getSeconds()
   }
   arrivalInfo.push(curArrivalInfo)
 
@@ -75,23 +41,50 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   var arrivalColor = 'img/warning_red.png'
   var arrivalTimeLeft = 14
 
-  var curArrivalInfo = {
-    arrivalTime: arrivalTime,
-    arrivalColor: arrivalColor,
-    arrivalTimeLeft: arrivalTimeLeft,
-    arrivalDirection : arrivalDirection,
-    nextStation : nextStation
-  }
-  arrivalInfo.push(curArrivalInfo)
-//
+  var arrivalInfos =[];
+  var obj = {}
 
+  for(var key in realtimeArrivalList){
+    if(realtimeArrivalList[key].subwayId-1000!=inputLine)continue;
+    d= new Date();
+    
+    var timeLeft = parseInt(realtimeArrivalList[key].barvlDt/60) + "분 " + realtimeArrivalList[key].barvlDt%60 +"초";
+    
+    d.setSeconds(d.getSeconds()+realtimeArrivalList[key].barvlDt);
+    
+    var arrivalTime = d.getHours()+"시 "+d.getMinutes()+"분 "+d.getHours()+"초";
+    
+    var arraivalColor;
+    var flag =realtimeArrivalList[key].barvlDt/60-result.totalTime;
+    if(flag <=-3 ){
+      arraivalColor="RED";
+    }else if(flag>=3){
+      arraivalColor="BLUE";
+    }else {
+      arraivalColor="YELLOW";
+    }
+    var nextStation = realtimeArrivalList[key].statnTid;
+    var arrivalDirection = realtimeArrivalList[key].trainLineNm;
+    obj ={
+      arrivalTime: arrivalTime,
+      arraivalColor: arraivalColor,
+      arrivalDirection: arrivalDirection,
+      nextStation: nextStation,
+      timeLeft: timeLeft
+    };
+    arrivalInfos.push(obj);
+
+  }
+  
   var station = {
-    stationName: stationName,
-    arrivalInfo: arrivalInfo // 배열
-  }
-
-  return {
-    station: station,
-    routeInfo: routeInfo,
-  }
+    arrivalInfo : arrivalInfos,
+    stationName : inputStation,
+    line : inputLine
+  };
+  var optimalRouteResult ={
+    station : station,
+    routeInfo : routeInfo 
+  };
+  console.log("finalResult",optimalRouteResult);
+  return optimalRouteResult;
 }
