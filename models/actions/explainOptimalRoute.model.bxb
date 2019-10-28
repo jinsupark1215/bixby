@@ -2,17 +2,17 @@ action (explainOptimalRoute) {
   type(Search)
   description (Give User Optimal Route Choices)
   collect {
-    input (directionRequested) {
-      type (DirectionRequested)
+    input (inputLine) {
+      type (InputLine)
       min (Required) max (One)
     }
-    input (stationRequested) {
-      type (StationRequested)
+    input (inputStation) {
+      type (InputStation)
       min (Required) max (One)
     }
     input (sourcePoint) {
       type (SourcePoint)
-      min (Required) max (One)
+      min (Required) max (One) 
       default-init {
         intent {
           goal: SourcePoint

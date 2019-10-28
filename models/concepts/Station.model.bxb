@@ -4,6 +4,10 @@ structure (Station) {
     type (StationName)
     min (Optional) max (One)
   }
+  property (line) {
+    type(Line)
+    min (Optional) max (One)
+  }
   property (arrivalInfo) {
     type(ArrivalInfo)
     min (Optional) max (Many)
