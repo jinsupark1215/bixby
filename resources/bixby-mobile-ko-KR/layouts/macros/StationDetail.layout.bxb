@@ -18,7 +18,7 @@ layout-macro-def (StationDetail) {
               image{
                 // url(img/warning_red.png)
                 url {
-                  template ("#{value(color)}")
+                  template("#{value(color)}")
                 }
                 shape (Circle)
               }

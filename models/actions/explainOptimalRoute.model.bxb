@@ -2,12 +2,12 @@ action (explainOptimalRoute) {
   type(Search)
   description (Give User Optimal Route Choices)
   collect {
-    input (directionRequested) {
-      type (DirectionRequested)
+    input (inputLine) {
+      type (InputLine)
       min (Required) max (One)
     }
-    input (stationRequested) {
-      type (StationRequested)
+    input (inputStation) {
+      type (InputStation)
       min (Required) max (One)
     }
     input (sourcePoint) {

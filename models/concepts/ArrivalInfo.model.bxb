@@ -12,4 +12,12 @@ structure (ArrivalInfo) {
     type (ArrivalTimeLeft)
     min (Optional) max (One)
   }
+  property (arrivalDirection) {
+    type (ArrivalDirection)
+    min (Optional) max (One)
+  }
+  property (nextStation) {
+    type(NextStation)
+    min (Optional) max (One)
+  }
 }
