@@ -18,31 +18,143 @@ layout-macro-def (StationDetail) {
               cell-area{
                 slot2{
                   content{
-                order (PrimarySecondary)
-                primary("#{value(optimal.station.arrivalInfo[0].ArrivalDirection)}행 방향")
+                order (SecondaryPrimary)
+                primary("#{value(optimal.station.arrivalInfo[0].arrivalDirection)}")
+                
               }
                 }
               }
               
+             hbox{
+               content{
+                 vbox{
+                   grow(1)
+                   content{
+                     text("　")
+                   }
+                 }
+                 vbox{
+                   halign (Center)
+                   valign (Middle)
+                   grow(4)
+                   content{
+                     single-line{
+                       text{
+                         style(Title_S)
+                         value("#{value(optimal.station.arrivalInfo[0].arrivalTimeLeft)}분 후 도착")
+                     }
+                     }
+                     single-line{
+                       text{
+                         style(Detail_L_Soft)
+                         value("#{value(optimal.station.arrivalInfo[0].arrivalTime)}")
+                       }
+                     }
+                   }
+                 }
+                 divider
+                 vbox{
+                   halign (Center)
+                   valign (Middle)
+                   grow(4)
+                   content{
+                     single-line{
+                       text{
+                         style(Title_S)
+                         value("#{value(optimal.station.arrivalInfo[1].arrivalTimeLeft)}분 후 도착")
+                     }
+                     }
+                     single-line{
+
+                       text{
+                         style(Detail_L_Soft)
+                         value("#{value(optimal.station.arrivalInfo[1].arrivalTime)}")
+                       }
+                     }
+                   }
+                 }
+                 vbox{
+                   grow(1)
+                   content{
+                     text("　")
+                   }
+                 }
+               }
+             } 
             }
-            // slot1{
-            //   image{
-            //     // url(img/warning_red.png)
-            //     url {
-            //       template("#{value(color)}")
-            //     }
-            //     shape (Circle)
-            //   }
-            // }
-            // slot2{
-            //   content{
-            //     order (PrimarySecondary)
-            //     primary("#{value(optimal.station.arrivalInfo[0].arrivalTimeLeft)}분 후 도착")
-            //   }
-            // }
-            // slot3{
-            //   label("#{value(optimal.station.arrivalInfo[0].arrivalTime)}")
-            // }
+          }  
+
+          //두번쨰 카드
+          compound-card{
+            content{
+              cell-area{
+                slot2{
+                  content{
+                order (SecondaryPrimary)
+                primary("#{value(optimal.station.arrivalInfo[2].arrivalDirection)}")
+                secondary("#{value(optimal.station.arrivalInfo[2].nextStation)}방향")
+                
+              }
+                }
+              }
+              
+             hbox{
+               content{
+                 vbox{
+                   grow(1)
+                   content{
+                     text("　")
+                   }
+                 }
+                 vbox{
+                   halign (Center)
+                   valign (Middle)
+                   grow(4)
+                   content{
+                     single-line{
+                       text{
+                         style(Title_S)
+                         value("#{value(optimal.station.arrivalInfo[2].arrivalTimeLeft)}분 후 도착")
+                     }
+                     }
+                     single-line{
+                       text{
+                         style(Detail_L_Soft)
+                         value("#{value(optimal.station.arrivalInfo[2].arrivalTime)}")
+                       }
+                     }
+                   }
+                 }
+                 divider
+                 vbox{
+                   halign (Center)
+                   valign (Middle)
+                   grow(4)
+                   content{
+                     single-line{
+                       text{
+                         style(Title_S)
+                         value("#{value(optimal.station.arrivalInfo[3].arrivalTimeLeft)}분 후 도착")
+                     }
+                     }
+                     single-line{
+
+                       text{
+                         style(Detail_L_Soft)
+                         value("#{value(optimal.station.arrivalInfo[3].arrivalTime)}")
+                       }
+                     }
+                   }
+                 }
+                 vbox{
+                   grow(1)
+                   content{
+                     text("　")
+                   }
+                 }
+               }
+             } 
+            }
           }   
         }
       }

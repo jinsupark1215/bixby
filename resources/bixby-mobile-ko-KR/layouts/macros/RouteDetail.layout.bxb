@@ -10,111 +10,19 @@ layout-macro-def (RouteDetail) {
   content {
     section {
       content {
-        compound-card {
-          content {
-            for-each (optimal.routeInfo) {
-              as(routeInfo) {
-                hbox {
-                  content{
-                    vbox{
-                      halign (Center)
-                      valign (Middle)
-                      content {
-                        single-line {
-                          image {
-                            background-color (Transparent)
-                            shape (Square)
-                            style (Title_XL)
-                            url {
-                                template ("img/placeholder.png")
-                            }
-                          }
-                        }
-                      }
-                    }
-                    vbox{
-                      halign (Center)
-                      valign (Middle)
-                      content {
-                        single-line {
-                          image {
-                            background-color (Transparent)
-                            shape (Square)
-                            style (Detail_M)
-                            url {
-                                template ("img/more.png")
-                            }
-                          }
-                        }
-                      }
-                    }
-                    vbox{
-                      halign (Center)
-                      valign (Bottom)
-                      content {
-                        single-line {
-                          image {
-                            background-color (Transparent)
-                            shape (Square)
-                            style (Title_L)
-                            url {
-                                template ("img/walk.png")
-                            }
-                          }
-                        }
-                        single-line {
-                          text {
-                            style (Title_XS)
-                            value ("#{value(optimal.routeInfo.duration)}분")
-                          }
-                        }
-                      }
-                    }
-
-                    vbox{
-                      halign (Center)
-                      valign (Middle)
-                      content {
-                        single-line {
-                          image {
-                            background-color (Transparent)
-                            shape (Square)
-                            style (Detail_M)
-                            url {
-                                template ("img/more.png")
-                            }
-                          }
-                        }
-                      }
-                    }
-
-                    vbox {
-                      halign (Center)
-                      content {
-                        single-line {
-                          image {
-                            background-color (Transparent)
-                            shape (Square)
-                            style (Title_XL)
-                            url {
-                                template ("img/train.png")
-                            }
-                          }
-                        }
-                        single-line {
-                          text {
-                            value {
-                                template ("#{value(optimal.routeInfo.userArrivalTime)} 도착")
-                            }
-                            style (Title_XS)
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+        cell-card{
+          slot1{
+            image{
+              shape (Square)
+              url(img/walk.png)
             }
+          }
+          slot2{
+            content{
+              order (SecondaryPrimary)
+              primary("#{value(optimal.routeInfo.duration)}분")
+              secondary("현재위치 역까지")
+            } 
           }
         }
       }
