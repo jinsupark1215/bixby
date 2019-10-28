@@ -3,7 +3,7 @@ capsule {
   version (0.1.0)
   format (3)
   targets {
-    target (bixby-mobile-ko-KR)
+    target (bixby-mobile-ko-KR) 
   }
   runtime-flags {
     use-input-views-for-selection-list-detail
@@ -12,7 +12,7 @@ capsule {
     concepts-inherit-super-type-features
     modern-prompt-rejection
     support-halt-effect-in-computed-inputs
-  }
+  } 
   capsule-imports {
     import(viv.geo) {
       as (geo)

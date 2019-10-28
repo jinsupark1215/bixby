@@ -1,8 +1,9 @@
-module.exports.function = function explainOptimalRoute (directionRequested, stationRequested) {
+var tool = require("lib/apiTool.js")
+var console = require('console')
 
-  const console = require('console')
-  console.log('ahha')
 
+
+module.exports.function = function explainOptimalRoute (directionRequested, stationRequested, sourcePoint) {  
   var wayToStationName = 'img/walk.png'
   var wayPointName = '역삼역'
   var wayPointDuration = 3
@@ -15,7 +16,6 @@ module.exports.function = function explainOptimalRoute (directionRequested, stat
   var arrivalTimeLeft = 6
 
   var stationName = '역삼역'
-
   var routeInfo = []
   
   var wayToStation = {

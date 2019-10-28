@@ -1,5 +1,5 @@
 train (t-6syfigm1d6vcwe2jgj0d3k2pt) {
   utterance ("[g:OptimalRouteResult] (역삼역)[v:StationRequested] (강남방향)[v:DirectionRequested] 열차 탈 수 있어?")
-  plan (Y2Bh0C3ISaxML8ovzUvRK0nNyfFNDSlKzCsuyC8q0fMvKMnMTcwJyi8tSQ1KLS7NKWHQw6M8tQIomZmHrAuv8S6ZRanJJZn5eUGphaWpxSWpKQzaeJQHlySiKmZmYGRgApIMQBoEIQDEB4sCAA==)
-  last-modified (1572231789247)
+  plan (fYxRCgIxDETjrl7FH7Gn8FeUrhcou0ECNalpAnp7KyLoTzOEBObNwAb2JafnVcV5CYY5H/GiiWsRtXAqRreUo7hhxOrZIHRwfDST+DfVrT+Q4mwkHPHuWA0X2HbwSVxnPAuxwa7HWfovXcMKBhjbhfZ99J2x7fB2Xg==)
+  last-modified (1572237837677)
 }

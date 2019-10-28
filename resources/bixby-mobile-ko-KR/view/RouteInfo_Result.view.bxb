@@ -2,10 +2,15 @@
 result-view {
   match: OptimalRouteResult(optimal)
   
-  message ("알지 알지 그거 알지")
+  message ("#{value(optimal.station.stationName)}의 도착정보입니다.")
   
   render {
     layout{
+      layout-macro (route_Details_Macro){
+      param (optimal){
+        expression (optimal)
+      }
+    }
       layout-macro (RouteDetail) {
         param (optimal) {
           expression (optimal)

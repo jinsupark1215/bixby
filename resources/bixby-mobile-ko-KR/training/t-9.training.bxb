@@ -1,0 +1,5 @@
+train (t-9ua7mwet9aw3ureeet2de7pu1) {
+  utterance ("[g:OptimalRouteResult] (역삼역)[v:StationRequested] (상행선)[v:DirectionRequested] 알려줘")
+  plan (fYxRCgIxDETjrl7FH7Gn8FeUrhcou0ECNalpAnp7KyLoTzOEBObNwAb2JafnVcV5CYY5H/GiiWsRtXAqRreUo7hhxOrZIHRwfDST+DfVrT+Q4mwkHPHuWA0X2HbwSVxnPAuxwa7HWfovXcMKBhjbhfZ99J2x7fB2Xg==)
+  last-modified (1572237399816)
+}
