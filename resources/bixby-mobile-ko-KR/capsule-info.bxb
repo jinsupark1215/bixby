@@ -2,6 +2,7 @@ capsule-info {
   display-name (알지)
   search-keywords {
     keyword (알지)
+    keyword (지하철)
   }
   developer-name (알지)
   icon-asset (/img/bixby_launcher.png)

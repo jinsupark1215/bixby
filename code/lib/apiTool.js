@@ -1,5 +1,6 @@
-const key = "AIzaSyAQcZwVV4VtCb_VvrNRkXOt1tiFwD1_KIY"
-const appKey="0e7d92db-628a-4842-b9fc-7fe5fbd2435f"
+var secret = require('secret');
+const key = secret.get('key');
+const appKey=secret.get('appKey');
 var http = require('http');
 var config = require('config');
 var console = require('console');

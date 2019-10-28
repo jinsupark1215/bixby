@@ -1,0 +1,11 @@
+legal {
+  country-documents { 
+    store-country (KR) 
+    terms-and-conditions { 
+      url (https://github.com/gilseong223/alg/blob/master/Terms%20and%20Policy.md) 
+    }
+    privacy-policy {
+      url (https://github.com/gilseong223/alg/blob/master/Privacy%20Policy.md) 
+    }
+  }
+}
