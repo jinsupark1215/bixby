@@ -1,0 +1,67 @@
+layout-macro-def(route_infos) {
+  params {
+    param (route) {
+      type (OptimalRouteResult)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    section {  // this macro returns a "section"
+      content {
+        for-each (route.routeInfo) {  // routeInfo에 대한 for문
+          as (routeInfo) {
+            cell-card {
+              slot1 {
+                image {
+                  url ("#{value(routeInfo.wayToStation.wayToStationName)}  (#{value(routeInfo.wayToStation.wayPointDuration)}분)")
+                  shape (Square)
+                }
+              }
+              slot2 {
+                content {
+                  order (PrimarySecondary)
+                  // 역까지의 경로 다 표현되어야 (wayToStation[].wayToStationName)
+                  // 여기 수정 필요!! 배열의 개수만큼 표시되어야.
+                  primary("#{value(routeInfo.wayToStation[0].wayToStationName)} > #{value(routeInfo.wayToStation[1].wayToStationName)}")
+                  // 역까지 총 걸리는 시간
+                  secondary("약 #{value(routeInfo.duration)}분 소요")
+                }
+              }
+            }
+            for-each (routeInfo.wayToStation) {
+              as (way) {
+                single-line {
+                  text {
+                    value ("#{value(way.wayToStationName)} 약 #{value(way.wayPointDuration)}분")
+                    style (Detail_L)
+                  }
+                }
+                single-line {
+                  text {
+                    value ("#{value(way.wayPointName)} 역(정류장)")
+                    style (Detail_L)
+                  }
+                }
+                single-line {
+                  text {
+                    value ("#{value(way.wayPointNumber)} 호선(번) 승차")
+                    style (Detail_L)
+                  }
+                }
+                single-line {
+                  text {
+                    value ("------------------------------------------------------------------------------")
+                    style (Detail_L)
+                  }
+                }
+              }
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}

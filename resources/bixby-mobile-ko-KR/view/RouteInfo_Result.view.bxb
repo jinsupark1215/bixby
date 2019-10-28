@@ -12,11 +12,16 @@ result-view {
   render {
     // 어떻게 화면을 그릴 것인가에 대하여 설정
     layout{
-    layout-macro (route_details){
-      param (route){
-        expression (route)
+      layout-macro (route_details){
+        param (route){
+          expression (route)
+        }
       }
-    }
+      layout-macro (route_infos){
+        param (route){
+          expression (route)
+        }
+      }
     }
   }
 }
