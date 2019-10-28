@@ -33,14 +33,6 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
     duration : result.features[0].properties.totalTime+"분",
     userArrivalTime : d.getHours() +":"+d.getMinutes()+":"+d.getSeconds()
   }
-  arrivalInfo.push(curArrivalInfo)
-
-   var arrivalDirection = '신도림행'
-  var nextStation = "강남"
-  var arrivalTime = '12:11'
-  var arrivalColor = 'img/warning_red.png'
-  var arrivalTimeLeft = 14
-
   var arrivalInfos =[];
   var obj = {}
 

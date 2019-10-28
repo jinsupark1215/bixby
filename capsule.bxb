@@ -1,9 +1,13 @@
 capsule {
-  id (playground.tellMeTransport)
+  id (ssafy1st7ban.alg)
   version (0.1.0)
   format (3)
   targets {
     target (bixby-mobile-ko-KR) 
+  }
+  store-sections {
+    section (TravelAndTransportation)
+    section (NewsAndMagazines)
   }
   runtime-flags {
     use-input-views-for-selection-list-detail
