@@ -12,7 +12,7 @@ action (explainOptimalRoute) {
     }
     input (sourcePoint) {
       type (SourcePoint)
-      min (Required) max (One)
+      min (Required) max (One) 
       default-init {
         intent {
           goal: SourcePoint
