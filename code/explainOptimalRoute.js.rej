@@ -1,0 +1,60 @@
+diff a/code/explainOptimalRoute.js b/code/explainOptimalRoute.js	(rejected hunks)
+@@ -15,40 +15,35 @@
+   if(giocode.status=="OK"){
+      destLocation  = giocode.results[0].geometry.location
+   }
+-  var result = tool.getInfo(startLocation.lat+","+startLocation.lng, destLocation.lat+","+destLocation.lng);
++  var result = tool.getInfo(startLocation.lng,startLocation.lat,destLocation.lng,destLocation.lat);
+   console.log("RESULT",result);
+   if(stationRequested.charAt(stationRequested.length-1)=="역"){
+     stationRequested= stationRequested.substring(0,stationRequested.length-1);
+   }
+- 
+-  console.log("stationname", stationRequested)
+   var stationInfo = tool.getSubwayInfo(stationRequested);
+-  console.log("stationInfo",stationInfo)
+-  return "hi"
+-
+-  var routeInfo = []
+-  
+-  var wayToStation = {
+-    wayToStationName: wayToStationName,
+-    wayPointName: wayPointName,
+-    wayPointNumber: wayPointNumber,
+-    wayPointDuration: wayPointDuration
++  console.log("stationInfo",stationInfo);
++  var realtimeArrivalList=[];
++  realtimeArrivalList= stationInfo.realtimeArrivalList;
++  var d= new Date();
++  d.setMinutes(d.getMinutes+result.totalTime);
++  var routeInfo = {
++    duration : result.totalTime+"분",
++    userArrivalTime : d.getHours +":"+d.getMinutes+":"+d.getSeconds
++  }
++  for(var key in realtimeArrivalList){
++    d= new Date();
++    var timeLeft = realtimeArrivalList[key].barvlDt/60 + "분 " + ealtimeArrivalList[key].barvlDt%60 +"초";
++    d.setSeconds(d.getSeconds+realtimeArrivalList[key].barvlDt);
++    var arrivalTime = d.getHours +"시 "+d.getMinutes+"분 "+d.getHours+"초";
++    var leftTime= result.totalTime - 
+   }
+ 
+-  var curRouteInfo = {
+-    duration: duration,
+-    wayToStation: wayToStation, // 배열
+-    userArrivalTime: userArrivalTime
+-  }
+-  
+-  routeInfo.push(curRouteInfo)
+-
+   var arrivalInfo = {
+     arrivalTime: arrivalTime,
+     arrivalColor: arrivalColor,
+-    arrivalTimeLeft: arrivalTimeLeft
++    arrivalTime: arrivalTimeLeft
+   }
+-
++  
+   var station = {
+     stationName: stationName,
+     arrivalInfo: arrivalInfo // 배열
