@@ -32,12 +32,12 @@ layout-macro-def (StationDetail) {
                  vbox{
                    halign (Center)
                    valign (Middle)
-                   grow(4)
+                   grow(5)
                    content{
                      single-line{
                        text{
-                         style(Title_S)
-                         value("#{value(optimal.station.arrivalInfo[0].arrivalTimeLeft)}분 후 도착")
+                         style(Title_XS)
+                         value("#{value(optimal.station.arrivalInfo[0].arrivalTimeLeft)} 후 도착")
                      }
                      }
                      single-line{
@@ -52,12 +52,12 @@ layout-macro-def (StationDetail) {
                  vbox{
                    halign (Center)
                    valign (Middle)
-                   grow(4)
+                   grow(5)
                    content{
                      single-line{
                        text{
-                         style(Title_S)
-                         value("#{value(optimal.station.arrivalInfo[1].arrivalTimeLeft)}분 후 도착")
+                         style(Title_XS)
+                         value("#{value(optimal.station.arrivalInfo[1].arrivalTimeLeft)} 후 도착")
                      }
                      }
                      single-line{
@@ -88,7 +88,6 @@ layout-macro-def (StationDetail) {
                   content{
                 order (SecondaryPrimary)
                 primary("#{value(optimal.station.arrivalInfo[2].arrivalDirection)}")
-                secondary("#{value(optimal.station.arrivalInfo[2].nextStation)}방향")
                 
               }
                 }
@@ -105,12 +104,12 @@ layout-macro-def (StationDetail) {
                  vbox{
                    halign (Center)
                    valign (Middle)
-                   grow(4)
+                   grow(5)
                    content{
                      single-line{
                        text{
-                         style(Title_S)
-                         value("#{value(optimal.station.arrivalInfo[2].arrivalTimeLeft)}분 후 도착")
+                         style(Title_XS)
+                         value("#{value(optimal.station.arrivalInfo[2].arrivalTimeLeft)} 후 도착")
                      }
                      }
                      single-line{
@@ -125,12 +124,12 @@ layout-macro-def (StationDetail) {
                  vbox{
                    halign (Center)
                    valign (Middle)
-                   grow(4)
+                   grow(5)
                    content{
                      single-line{
                        text{
-                         style(Title_S)
-                         value("#{value(optimal.station.arrivalInfo[3].arrivalTimeLeft)}분 후 도착")
+                         style(Title_XS)
+                         value("#{value(optimal.station.arrivalInfo[3].arrivalTimeLeft)} 후 도착")
                      }
                      }
                      single-line{

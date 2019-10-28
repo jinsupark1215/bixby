@@ -1,0 +1,5 @@
+train (t-x3ij4m1oi2c4ogx9kk8dviifp) {
+  utterance ("[g:OptimalRouteResult] (명일역)[v:InputStation] (5)[v:InputLine]호선 알려줘")
+  plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
+  last-modified (1572267150195)
+}

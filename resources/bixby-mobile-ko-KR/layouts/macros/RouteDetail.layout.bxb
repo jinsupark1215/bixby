@@ -20,7 +20,7 @@ layout-macro-def (RouteDetail) {
           slot2{
             content{
               order (SecondaryPrimary)
-              primary("#{value(optimal.routeInfo.duration)}분")
+              primary("#{value(optimal.routeInfo.duration)} 예상")
               secondary("현재위치 역까지")
             } 
           }
