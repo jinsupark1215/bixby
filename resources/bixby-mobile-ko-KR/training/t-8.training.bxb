@@ -1,11 +1,5 @@
 train (t-8euxn022wzvjznybm6mlrykpp) {
-<<<<<<< HEAD
-  utterance ("[g:SourcePoint] (역삼역)[v:StationRequested] (강남방향)[v:DirectionRequested] 시간알려줘")
-  plan (Y2BlUCvISaxML8ovzUvRK0nNyfFNDSlKzCsuyC8q0QvOLy1KTg3Iz8wrYdDDoy61AiiZmedfUJKZm5gTlF9aksqgi0e9S2ZRanJJZn5eUGphaWpxSWoK0c7QxqeuJBHVUBYGRgYmBmYgzQBkQSAMMAMxE0gGAA==)
-  last-modified (1571968370566)
-=======
   utterance ("[g:ArrivalTime] (역삼역)[v:StationRequested] (강남방향)[v:DirectionRequested] 시간알려줘")
   plan (Y2BhUCvISaxML8ovzUvRK0nNyfFNDSlKzCsuyC8q0XMsKsosS8wJycxNZdDDoy61AiiZmedfUJKZm5gTlF9aksqgi0e9S2ZRanJJZn5eUGphaWpxSWoKgzYe5cEliaiKmRkYGZiAJAOQBkEIAPHBogA=)
-  last-modified (1571977140991)
->>>>>>> 44c0fefcf4d5b184dff440af65ff27b12630818b
+  last-modified (1571964759093)
 }

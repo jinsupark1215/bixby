@@ -8,14 +8,27 @@ layout-macro-def (route_details) {
     }
   }
   content {
-    title-area {
-            image{
-              url (img/subway.png)
+    section {
+        content {
+          cell-card{
+            slot1{
+              image{
+                // url(img/warning_red.png)
+                url("#{value(route.station.arrivalInfo[0].arrivalColor)}")
+                shape (Circle)
+              }
             }
-              // order (PrimarySecondary)
-              // primary ("#{value(route.name)}")
-              // secondary ("위치: #{value(route.location)}")
+            slot2{
+              content{
+                order (PrimarySecondary)
+                primary("#{value(route.station.arrivalInfo[0].arrivalTimeLeft)}분 후 도착")
+              }
+            }
+            slot3{
+              label("#{value(route.station.arrivalInfo[0].arrivalTime)}")
+            }
+          }   
         }
-     }
+      }
   }
 }
