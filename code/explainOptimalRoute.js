@@ -12,7 +12,7 @@ module.exports.function = function explainOptimalRoute (directionRequested, stat
   var duration = 3
   var userArrivalTime = '12:00'
   var arrivalTime = '12:03'
-  var arrivalColor = 'Green'
+  var arrivalColor = 'img/warning_red.png'
   var arrivalTimeLeft = 6
 
   var stationName = '역삼역'
