@@ -13,25 +13,36 @@ layout-macro-def (StationDetail) {
   content {
     section {
         content {
-          cell-card{
-            slot1{
-              image{
-                // url(img/warning_red.png)
-                url {
-                  template("#{value(color)}")
-                }
-                shape (Circle)
-              }
-            }
-            slot2{
-              content{
+          compound-card{
+            content{
+              cell-area{
+                slot2{
+                  content{
                 order (PrimarySecondary)
-                primary("#{value(optimal.station.arrivalInfo[0].arrivalTimeLeft)}분 후 도착")
+                primary("#{value(optimal.station.arrivalInfo[0].ArrivalDirection)}행 방향")
               }
+                }
+              }
+              
             }
-            slot3{
-              label("#{value(optimal.station.arrivalInfo[0].arrivalTime)}")
-            }
+            // slot1{
+            //   image{
+            //     // url(img/warning_red.png)
+            //     url {
+            //       template("#{value(color)}")
+            //     }
+            //     shape (Circle)
+            //   }
+            // }
+            // slot2{
+            //   content{
+            //     order (PrimarySecondary)
+            //     primary("#{value(optimal.station.arrivalInfo[0].arrivalTimeLeft)}분 후 도착")
+            //   }
+            // }
+            // slot3{
+            //   label("#{value(optimal.station.arrivalInfo[0].arrivalTime)}")
+            // }
           }   
         }
       }
