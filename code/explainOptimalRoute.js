@@ -27,27 +27,33 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   var realtimeArrivalList=[];
   realtimeArrivalList= stationInfo.realtimeArrivalList;
   var d= new Date();
-
-  d.setMinutes(d.getMinutes()+result.features[0].properties.totalTime);
+  
+  d.setHours(d.getHours()+9);
+  console.log("currentTime",d);
+  d.setMinutes(d.getMinutes()+parseInt(result.features[0].properties.totalTime/60));
   var routeInfo = {
-    duration : result.features[0].properties.totalTime+"분",
+    duration : parseInt(result.features[0].properties.totalTime/60)+"분",
     userArrivalTime : d.getHours() +":"+d.getMinutes()+":"+d.getSeconds()
   }
   var arrivalInfos =[];
   var obj = {}
 
   for(var key in realtimeArrivalList){
+    var nowTime = new Date();
+    nowTime.setHours(nowTime.getHours()+9);
     if(realtimeArrivalList[key].subwayId-1000!=inputLine)continue;
-    d= new Date();
-    
     var timeLeft = parseInt(realtimeArrivalList[key].barvlDt/60) + "분 " + realtimeArrivalList[key].barvlDt%60 +"초";
     
-    d.setSeconds(d.getSeconds()+realtimeArrivalList[key].barvlDt);
-    
-    var arrivalTime = d.getHours()+"시 "+d.getMinutes()+"분 "+d.getHours()+"초";
+    nowTime.setMinutes(nowTime.getMinutes()+ parseInt(realtimeArrivalList[key].barvlDt/60));
+    nowTime.setSeconds(nowTime.getSeconds() + realtimeArrivalList[key].barvlDt%60);
+    console.log("curTime",nowTime);
+   
+    var arrivalTime = nowTime.getHours()+"시 "+nowTime.getMinutes()+"분 "+nowTime.getHours()+"초";
     
     var arraivalColor;
-    var flag =realtimeArrivalList[key].barvlDt/60-result.totalTime;
+    
+    var flag = parseInt(realtimeArrivalList[key].barvlDt/60)-parseInt(result.features[0].properties.totalTime/60);
+    
     if(flag <=-3 ){
       arraivalColor="RED";
     }else if(flag>=3){

@@ -2,7 +2,7 @@
 result-view {
   match: OptimalRouteResult(optimal)
   
-  message ("#{value(optimal.station.stationName)}의 도착정보입니다.")
+  message ("#{value(optimal.station.stationName)}역의 도착정보입니다.")
   
   render {
     layout{
