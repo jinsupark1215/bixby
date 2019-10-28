@@ -6,6 +6,9 @@ layout-macro-def (route_Details_Macro) {
       type (OptimalRouteResult)
       min (Required) max (One)
     }
+    param (color) {
+      type (ArrivalColor)
+    }
   }
   content {
     section {
@@ -14,7 +17,7 @@ layout-macro-def (route_Details_Macro) {
             slot1{
               image{
                 // url(img/warning_red.png)
-                url("#{value(optimal.station.arrivalInfo[0].arrivalColor)}")
+                url(color)
                 shape (Circle)
               }
             }
