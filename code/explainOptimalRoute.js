@@ -16,6 +16,8 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   var arrivalTimeLeft = 6
 
   var stationName = '역삼역'
+  var arrivalDirection = '상일동 행'
+  var nextStation = '강남'
 
   var routeInfo = {
     duration: duration,
@@ -26,7 +28,9 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   var curArrivalInfo = {
     arrivalTime: arrivalTime,
     arrivalColor: arrivalColor,
-    arrivalTimeLeft: arrivalTimeLeft
+    arrivalTimeLeft: arrivalTimeLeft,
+    arrivalDirection: arrivalDirection,
+    nextStation: nextStation
   }
 
   arrivalInfo.push(curArrivalInfo)

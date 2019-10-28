@@ -19,7 +19,7 @@ layout-macro-def (StationDetail) {
                 slot2{
                   content{
                 order (PrimarySecondary)
-                primary("#{value(optimal.station.arrivalInfo[0].ArrivalDirection)}행 방향")
+                primary("#{value(optimal.station.arrivalInfo[0].arrivalDirection)}행 방향")
               }
                 }
               }
