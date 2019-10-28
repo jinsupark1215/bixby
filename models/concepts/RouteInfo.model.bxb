@@ -1,5 +1,5 @@
 structure (RouteInfo) {
-  description (__DESCRIPTION__)
+  description (길찾기를 통한 정보)
   property (duration) {
     type (Duration)
     min (Optional) max (One)

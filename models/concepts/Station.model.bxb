@@ -1,5 +1,5 @@
 structure (Station) {
-  description (__DESCRIPTION__)
+  description (역 정보)
   property (stationName) {
     type (StationName)
     min (Optional) max (One)

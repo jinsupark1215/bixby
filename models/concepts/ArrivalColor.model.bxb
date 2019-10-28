@@ -1,5 +1,5 @@
 name (ArrivalColor) {
-  description (__DESCRIPTION__)
+  description (현재 위치와 역의 거리를 계산해 여유가 있으면 파란색, 적당하면 주황색, 급박하면 빨간색으로 표시)
 
   
 }
