@@ -1,5 +1,0 @@
-train (t-xstr7olpqrvou06umalb8bcyi) {
-  utterance ("[g:OptimalRouteResult] (강남역)[v:InputStation] (2)[v:InputLine]호선 알려줘")
-  plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
-  last-modified (1572260421510)
-}

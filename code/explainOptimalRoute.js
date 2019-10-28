@@ -68,7 +68,7 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
       arrivalColor: arrivalColor,
       arrivalDirection: arrivalDirection,
       nextStation: nextStation,
-      timeLeft: timeLeft
+      arrivalTimeLeft: timeLeft
     };
     arrivalInfos.push(obj);
 
