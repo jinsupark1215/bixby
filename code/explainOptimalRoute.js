@@ -50,22 +50,22 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
    
     var arrivalTime = nowTime.getHours()+"시 "+nowTime.getMinutes()+"분 "+nowTime.getHours()+"초";
     
-    var arraivalColor;
+    var arrivalColor;
     
     var flag = parseInt(realtimeArrivalList[key].barvlDt/60)-parseInt(result.features[0].properties.totalTime/60);
     
     if(flag <=-3 ){
-      arraivalColor="RED";
+      arrivalColor="RED";
     }else if(flag>=3){
-      arraivalColor="BLUE";
+      arrivalColor="BLUE";
     }else {
-      arraivalColor="YELLOW";
+      arrivalColor="YELLOW";
     }
     var nextStation = realtimeArrivalList[key].statnTid;
     var arrivalDirection = realtimeArrivalList[key].trainLineNm;
     obj ={
       arrivalTime: arrivalTime,
-      arraivalColor: arraivalColor,
+      arrivalColor: arrivalColor,
       arrivalDirection: arrivalDirection,
       nextStation: nextStation,
       timeLeft: timeLeft
