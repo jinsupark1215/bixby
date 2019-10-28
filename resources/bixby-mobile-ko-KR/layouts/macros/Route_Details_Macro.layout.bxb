@@ -13,8 +13,8 @@ layout-macro-def (route_Details_Macro) {
           cell-card{
             slot1{
               image{
-                // url(img/warning_red.png)
-                url("#{value(optimal.station.arrivalInfo[0].arrivalColor)}")
+                url(img/warning_red.png)
+                // url("#{value(optimal.station.arrivalInfo[0].arrivalColor)}")
                 shape (Circle)
               }
             }
