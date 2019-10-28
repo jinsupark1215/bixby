@@ -3,7 +3,7 @@ endpoints {
     // Uncomment the lines below and enter the information for actions, inputs, and the appropriate local or remote endpoints
 
       action-endpoint (explainOptimalRoute) {
-        accepted-inputs (directionRequested, stationRequested, sourcePoint)
+        accepted-inputs (inputLine, inputStation, sourcePoint)
         local-endpoint (explainOptimalRoute.js) 
     }
   }

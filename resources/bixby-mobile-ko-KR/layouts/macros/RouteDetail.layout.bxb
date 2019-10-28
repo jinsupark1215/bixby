@@ -48,56 +48,30 @@ layout-macro-def (RouteDetail) {
                         }
                       }
                     }
-                    for-each (routeInfo.wayToStation) {
-                      as(wayToStation) {
-                        if (1 == 2){
-                          vbox{
-                            halign (End)
-                            content {
-                              single-line {
-                                image {
-                                  background-color (Transparent)
-                                  shape (Square)
-                                  style (Title_XL)
-                                  url {
-                                      template ("img/walk.png")
-                                  }
-                                }
-                              }
-                              single-line {
-                                text {
-                                  style (Title_XS)
-                                  value ("#{value(wayToStation.wayPointDuration)}")
-                                }
-                              }
+                    vbox{
+                      halign (Center)
+                      valign (Bottom)
+                      content {
+                        single-line {
+                          image {
+                            background-color (Transparent)
+                            shape (Square)
+                            style (Title_L)
+                            url {
+                                template ("img/walk.png")
                             }
                           }
                         }
-                        else {
-                          vbox{
-                            halign (Center)
-                            valign (Bottom)
-                            content {
-                              single-line {
-                                image {
-                                  background-color (Transparent)
-                                  shape (Square)
-                                  style (Title_L)
-                                  url {
-                                      template ("img/walk.png")
-                                  }
-                                }
-                              }
-                              single-line {
-                                text {
-                                  style (Title_XS)
-                                  value ("#{value(wayToStation.wayPointDuration)}분")
-                                }
-                              }
-                            }
+                        single-line {
+                          text {
+                            style (Title_XS)
+                            value ("#{value(optimal.routeInfo.duration)}분")
                           }
+                        }
+                      }
+                    }
 
-                          vbox{
+                    vbox{
                       halign (Center)
                       valign (Middle)
                       content {
@@ -114,8 +88,8 @@ layout-macro-def (RouteDetail) {
                       }
                     }
 
-                          vbox {
-                            halign (Center)
+                    vbox {
+                      halign (Center)
                       content {
                         single-line {
                           image {
@@ -130,12 +104,9 @@ layout-macro-def (RouteDetail) {
                         single-line {
                           text {
                             value {
-                                template ("#{value(optimal.station.stationName)}")
+                                template ("#{value(optimal.routeInfo.userArrivalTime)} 도착")
                             }
                             style (Title_XS)
-                          }
-                        }
-                      }
                           }
                         }
                       }
@@ -146,34 +117,6 @@ layout-macro-def (RouteDetail) {
             }
           }
         }
-        
-        // for-each (optimal.routeInfo) { 
-        //   as(routeInfo) {
-        //     partitioned {
-        //       content {
-        //         single-line {
-        //           text {
-        //             style (Title_XS)
-        //             value ("도착 시간   #{value(routeInfo.userArrivalTime)}   남은 시간   #{value(routeInfo.duration)}")
-        //           }
-        //         }
-        //         for-each (routeInfo.wayToStation) {
-        //           as(wayToStation) {
-        //             single-line {
-        //               image {
-                        
-        //               }
-        //               text {
-        //                 style (Title_XS)
-        //                 value ("#{value(wayToStation.wayToStationName)}  #{value(wayToStation.wayPointDuration)}")
-        //               } 
-        //             }
-        //           }
-        //         }
-        //       }
-        //     }
-        //   }
-        // }
       }
     }
   }
