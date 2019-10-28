@@ -10,27 +10,135 @@ layout-macro-def (RouteDetail) {
   content {
     section {
       content {
-        
-        for-each (optimal.routeInfo) { 
-          as(routeInfo) {
-            partitioned {
-              content {
-                single-line {
-                  text {
-                    style (Title_XS)
-                    value ("도착 시간   #{value(routeInfo.userArrivalTime)}   남은 시간   #{value(routeInfo.duration)}")
-                  }
-                }
-                for-each (routeInfo.wayToStation) {
-                  as(wayToStation) {
-                    single-line {
-                      image {
-                        
+        compound-card {
+          content {
+            for-each (optimal.routeInfo) {
+              as(routeInfo) {
+                hbox {
+                  content{
+                    vbox{
+                      halign (Center)
+                      valign (Middle)
+                      content {
+                        single-line {
+                          image {
+                            background-color (Transparent)
+                            shape (Square)
+                            style (Title_XL)
+                            url {
+                                template ("img/placeholder.png")
+                            }
+                          }
+                        }
                       }
-                      text {
-                        style (Title_XS)
-                        value ("#{value(wayToStation.wayToStationName)}  #{value(wayToStation.wayPointDuration)}")
-                      } 
+                    }
+                    vbox{
+                      halign (Center)
+                      valign (Middle)
+                      content {
+                        single-line {
+                          image {
+                            background-color (Transparent)
+                            shape (Square)
+                            style (Detail_M)
+                            url {
+                                template ("img/more.png")
+                            }
+                          }
+                        }
+                      }
+                    }
+                    for-each (routeInfo.wayToStation) {
+                      as(wayToStation) {
+                        if (1 == 2){
+                          vbox{
+                            halign (End)
+                            content {
+                              single-line {
+                                image {
+                                  background-color (Transparent)
+                                  shape (Square)
+                                  style (Title_XL)
+                                  url {
+                                      template ("img/walk.png")
+                                  }
+                                }
+                              }
+                              single-line {
+                                text {
+                                  style (Title_XS)
+                                  value ("#{value(wayToStation.wayPointDuration)}")
+                                }
+                              }
+                            }
+                          }
+                        }
+                        else {
+                          vbox{
+                            halign (Center)
+                            valign (Bottom)
+                            content {
+                              single-line {
+                                image {
+                                  background-color (Transparent)
+                                  shape (Square)
+                                  style (Title_L)
+                                  url {
+                                      template ("img/walk.png")
+                                  }
+                                }
+                              }
+                              single-line {
+                                text {
+                                  style (Title_XS)
+                                  value ("#{value(wayToStation.wayPointDuration)}분")
+                                }
+                              }
+                            }
+                          }
+
+                          vbox{
+                      halign (Center)
+                      valign (Middle)
+                      content {
+                        single-line {
+                          image {
+                            background-color (Transparent)
+                            shape (Square)
+                            style (Detail_M)
+                            url {
+                                template ("img/more.png")
+                            }
+                          }
+                        }
+                      }
+                    }
+
+                          vbox {
+                            halign (Center)
+                      content {
+                        single-line {
+                          image {
+                            background-color (Transparent)
+                            shape (Square)
+                            style (Title_XL)
+                            url {
+                                template ("img/train.png")
+                            }
+                          }
+                        }
+                        single-line {
+                          text {
+                            value {
+                                template ("#{value(optimal.station.stationName)}")
+                            }
+                            style (Title_XS)
+                          }
+                        }
+                      }
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -38,6 +146,34 @@ layout-macro-def (RouteDetail) {
             }
           }
         }
+        
+        // for-each (optimal.routeInfo) { 
+        //   as(routeInfo) {
+        //     partitioned {
+        //       content {
+        //         single-line {
+        //           text {
+        //             style (Title_XS)
+        //             value ("도착 시간   #{value(routeInfo.userArrivalTime)}   남은 시간   #{value(routeInfo.duration)}")
+        //           }
+        //         }
+        //         for-each (routeInfo.wayToStation) {
+        //           as(wayToStation) {
+        //             single-line {
+        //               image {
+                        
+        //               }
+        //               text {
+        //                 style (Title_XS)
+        //                 value ("#{value(wayToStation.wayToStationName)}  #{value(wayToStation.wayPointDuration)}")
+        //               } 
+        //             }
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
       }
     }
   }

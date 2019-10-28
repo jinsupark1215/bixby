@@ -1,5 +1,5 @@
 train (t-8euxn022wzvjznybm6mlrykpp) {
   utterance ("[g:OptimalRouteResult] (역삼역)[v:StationRequested] (강남방향)[v:DirectionRequested] 시간알려줘")
   plan (Y2Bh0C3ISaxML8ovzUvRK0nNyfFNDSlKzCsuyC8q0fMvKMnMTcwJyi8tSQ1KLS7NKWHQw6M8tQIomZmHrAuv8S6ZRanJJZn5eUGphaWpxSWpKQzaeJQHlySiKmZmYGRgApIMQBoEIQDEB4sCAA==)
-  last-modified (1572148783163)
+  last-modified (1572231796208)
 }
