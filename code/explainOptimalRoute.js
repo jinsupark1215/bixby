@@ -3,7 +3,7 @@ var console = require('console')
 
 
 
-module.exports.function = function explainOptimalRoute (directionRequested, stationRequested, sourcePoint) {  
+module.exports.function = function explainOptimalRoute (inputLine, inputStation, sourcePoint) {  
   var wayToStationName = 'img/walk.png'
   var wayPointName = '역삼역'
   var wayPointDuration = 3
@@ -16,22 +16,11 @@ module.exports.function = function explainOptimalRoute (directionRequested, stat
   var arrivalTimeLeft = 6
 
   var stationName = '역삼역'
-  var routeInfo = []
-  
-  var wayToStation = {
-    wayToStationName: wayToStationName,
-    wayPointName: wayPointName,
-    wayPointNumber: wayPointNumber,
-    wayPointDuration: wayPointDuration
-  }
 
-  var curRouteInfo = {
+  var routeInfo = {
     duration: duration,
-    wayToStation: wayToStation, // 배열
     userArrivalTime: userArrivalTime
   }
-  
-  routeInfo.push(curRouteInfo)
 
   var arrivalInfo = []
   var curArrivalInfo = {
@@ -49,6 +38,6 @@ module.exports.function = function explainOptimalRoute (directionRequested, stat
 
   return {
     station: station,
-    routeInfo: routeInfo, // 배열
+    routeInfo: routeInfo,
   }
 }
