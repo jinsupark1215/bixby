@@ -35,7 +35,7 @@ module.exports.function = function explainOptimalRoute (directionRequested, stat
     var timeLeft = realtimeArrivalList[key].barvlDt/60 + "분 " + ealtimeArrivalList[key].barvlDt%60 +"초";
     d.setSeconds(d.getSeconds+realtimeArrivalList[key].barvlDt);
     var arrivalTime = d.getHours +"시 "+d.getMinutes+"분 "+d.getHours+"초";
-    var leftTime= result.totalTime - 
+    var leftTime= result.totalTime 
   }
 
   var arrivalInfo = {
