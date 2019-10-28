@@ -18,7 +18,7 @@ layout-macro-def (route_Details_Macro) {
               image{
                 // url(img/warning_red.png)
                 url {
-                  template ("#{value(color)}")
+                  template("#{value(color)}")
                 }
                 shape (Circle)
               }

@@ -4,10 +4,6 @@ structure (RouteInfo) {
     type (Duration)
     min (Optional) max (One)
   }
-  property (wayToStation) {
-    type (WayToStation)
-    min (Optional) max (Many)
-  }
   property (userArrivalTime) {
     type (UserArrivalTime)
     min (Optional) max (One)
