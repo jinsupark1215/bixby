@@ -1,0 +1,5 @@
+train (t-b7o80i96sll5zuo9gdr98v3w3) {
+  utterance ("[g:OptimalRouteResult] (역삼역)[v:InputStation] (2)[v:InputLine]")
+  plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
+  last-modified (1572310511811)
+}

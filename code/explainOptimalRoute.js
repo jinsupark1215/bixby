@@ -41,7 +41,13 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   for(var key in realtimeArrivalList){
     var nowTime = new Date();
     nowTime.setHours(nowTime.getHours()+9);
-    if(realtimeArrivalList[key].subwayId-1000!=inputLine)continue;
+    if(realtimeArrivalList[key].subwayId-1000!=inputLine) {
+      obj ={
+        arrivalDirection: "입력하신 역은 " + inputLine + "호선이 없습니다."
+      };
+      arrivalInfos.push(obj);
+      continue;
+    }
     var timeLeft = parseInt(realtimeArrivalList[key].barvlDt/60) + "분 " + realtimeArrivalList[key].barvlDt%60 +"초";
     
     nowTime.setMinutes(nowTime.getMinutes()+ parseInt(realtimeArrivalList[key].barvlDt/60));

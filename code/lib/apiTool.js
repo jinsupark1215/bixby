@@ -52,7 +52,9 @@ module.exports.getInfo=function(startX,startY,endX,endY) {
 }      
 
 module.exports.getSubwayInfo=function(station){
+    console.log("station: ", station);
     var enc = encodeURI(station);
+    console.log("enc: ", enc);
     var log = http.getUrl("http://swopenapi.seoul.go.kr/api/subway/7a4e4c666c756c74333448716a7877/json/realtimeStationArrival/0/100/"+enc,{format:"json"});
     console.log("log",log);
     return log
