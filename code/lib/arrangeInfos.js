@@ -25,8 +25,12 @@ module.exports.arrangeInfos= function(infos) {
     arrivalInfos.push(arrivalUps[0]);
     arrivalInfos.push(arrivalUps[1]);
   }
-  else {
+  else if(arrivalUps.length > 0) {
     arrivalInfos.push(arrivalUps[0]);
+    arrivalInfos.push();
+  }
+  else {
+    arrivalInfos.push();
     arrivalInfos.push();
   }
 
@@ -34,8 +38,12 @@ module.exports.arrangeInfos= function(infos) {
     arrivalInfos.push(arrivalDowns[0]);
     arrivalInfos.push(arrivalDowns[1]);
   }
-  else {
+  else if(arrivalDowns.length > 0) {
     arrivalInfos.push(arrivalDowns[0]);
+    arrivalInfos.push();
+  }
+  else {
+    arrivalInfos.push();
     arrivalInfos.push();
   }
 

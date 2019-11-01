@@ -1,0 +1,5 @@
+train (t-nn2bw03stgfl9tc8vyotawec0) {
+  utterance ("[g:OptimalRouteResult] (왕십리역)[v:InputStation] (분당선)[v:InputLine] 알려주겠니")
+  plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
+  last-modified (1572591865228)
+}

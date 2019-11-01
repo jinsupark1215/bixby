@@ -1,0 +1,5 @@
+train (t-z9p8ibu4hoytgyaewpj33cdnw) {
+  utterance ("[g:OptimalRouteResult] 알지에서 (판교역)[v:InputStation] (신분당선)[v:InputLine] 찾아볼래")
+  plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
+  last-modified (1572591147184)
+}

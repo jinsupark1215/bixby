@@ -687,7 +687,7 @@ module.exports.stationName = [
 	{
 		"SUBWAY_ID": "1008",
 		"STATN_ID": "1008000822",
-		"STATN_NM": "남한산성입구(성남법원"
+		"STATN_NM": "남한산성입구(성남법원, 검찰청)"
 	},
 	{
 		"SUBWAY_ID": "1009",

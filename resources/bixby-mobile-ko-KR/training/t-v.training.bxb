@@ -1,0 +1,5 @@
+train (t-ve5tvq8r035c1gye27y30fvv4) {
+  utterance ("[g:OptimalRouteResult] 알지에서 (왕십리역)[v:InputStation] (2호선)[v:InputLine] 찾아줘")
+  plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
+  last-modified (1572590983525)
+}

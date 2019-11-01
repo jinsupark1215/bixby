@@ -1,0 +1,5 @@
+train (t-p6t0cghk6tifuvbym2iudjdjj) {
+  utterance ("[g:OptimalRouteResult] (고속터미널역)[v:InputStation] (9호선)[v:InputLine] 알려줘봐")
+  plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
+  last-modified (1572590984391)
+}

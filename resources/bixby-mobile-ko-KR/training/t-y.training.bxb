@@ -1,0 +1,5 @@
+train (t-ydvew7r567zdkdv5f2wui7tns) {
+  utterance ("[g:OptimalRouteResult] (종합운동장역)[v:InputStation] (9호선)[v:InputLine] 알려줄래")
+  plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
+  last-modified (1572590617444)
+}
