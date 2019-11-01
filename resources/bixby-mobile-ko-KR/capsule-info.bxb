@@ -5,7 +5,7 @@ capsule-info {
     keyword (지하철)
   }
   developer-name (알지)
-  icon-asset (/img/bixby_launcher.png)
+  icon-asset (/img/rg.png)
   description ("지하철 역의 도착 정보 및 시간 알리미입니다.")
   dispatch-name (알지)
 }
