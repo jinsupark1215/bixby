@@ -1,3 +1,8 @@
+train (t-u0dfnzm8421nd32mx1voc8hu5) {
+  utterance ("[g:OptimalRouteResult] 알지에서 (안양역)[v:InputStation] (1호선)[v:InputLine]은 어디니")
+  plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
+  last-modified (1572591020208)
+}
 train (t-uxes83xgcuhwbxlgkg78fl9da) {
   utterance ("[g:OptimalRouteResult] (청량리역)[v:InputStation] (중앙선)[v:InputLine] 알려줘")
   plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
