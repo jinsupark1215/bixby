@@ -1,10 +1,5 @@
-train (t-80ayphxtdnl5zkmw1zvvjrhxo) {
-  utterance ("[g:OptimalRouteResult] (강남역)[v:InputStation] (2)[v:InputLine]호선")
-  plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
-  last-modified (1572585471365)
-}
 train (t-82q5jhpyf8ux31n3n00qvey9g) {
   utterance ("[g:OptimalRouteResult] (역삼역)[v:InputStation] (2호선)[v:InputLine] 알려줘")
   plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
-  last-modified (1572585898664)
+  last-modified (1572588064196)
 }

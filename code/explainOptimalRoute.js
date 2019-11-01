@@ -2,6 +2,7 @@ var tool = require("lib/apiTool.js")
 var convertStation = require("lib/getStationName.js")
 var console = require('console')
 var getArrivalTime = require("lib/getArrivalTime")
+var arrangeInfos = require("lib/arrangeInfos.js")
 
 
 
@@ -49,10 +50,7 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
     if(realtimeArrivalList[key].subwayId!=lineNum) continue;
     var timeLeft = getArrivalTime.getRemainingTime(realtimeArrivalList[key]) + "";
     var arrivalTime = ""
-    if(!timeLeft.match("초 후 도착")){
-      inputStation= inputStation.substring(0,inputStation.length-1);
-    }
-    else {
+    if(timeLeft.match("초 후 도착")){
       nowTime.setMinutes(nowTime.getMinutes()+ parseInt(realtimeArrivalList[key].barvlDt/60));
       // console.log("curTime",nowTime);
       arrivalTime = nowTime.getHours()+"시 "+nowTime.getMinutes()+"분";
@@ -76,12 +74,15 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
       arrivalColor: arrivalColor,
       arrivalDirection: arrivalDirection,
       nextStation: nextStation,
-      arrivalTimeLeft: timeLeft
+      arrivalTimeLeft: timeLeft,
+      headingFor: realtimeArrivalList[key].updnLine
     };
     console.log("가져온 정보",realtimeArrivalList[key])
     arrivalInfos.push(obj);
-
   }
+
+  arrivalInfos = arrangeInfos.arrangeInfos(arrivalInfos);
+  console.log(arrivalInfos)
   
   var station = {
     arrivalInfo : arrivalInfos,
