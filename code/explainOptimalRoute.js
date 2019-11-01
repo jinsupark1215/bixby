@@ -42,7 +42,7 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   var arrivalInfos =[];
   var obj = {}
   var lineNum = convertStation.getLineNum(inputLine)
-  console.log(lineNum)
+  // console.log(lineNum)
   for(var key in realtimeArrivalList){
     var nowTime = new Date();
     nowTime.setHours(nowTime.getHours()+9);
