@@ -1,4 +1,5 @@
 var tool = require("lib/apiTool.js")
+var convertStation = require("lib/getStationName.js")
 var console = require('console')
 var getArrivalTime = require("lib/getArrivalTime")
 
@@ -22,8 +23,10 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   if(inputStation.charAt(inputStation.length-1)=="역"){
     inputStation= inputStation.substring(0,inputStation.length-1);
   }
-
-  var stationInfo = tool.getSubwayInfo(inputStation);
+  
+  var input = convertStation.getStationName(inputStation);
+  
+  var stationInfo = tool.getSubwayInfo(input);
   console.log("stationInfo",stationInfo);
   var realtimeArrivalList=[];
   realtimeArrivalList= stationInfo.realtimeArrivalList;
