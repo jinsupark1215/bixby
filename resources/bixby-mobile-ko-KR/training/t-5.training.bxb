@@ -1,0 +1,5 @@
+train (t-529we1ik14mni6rxufcutyr97) {
+  utterance ("[g:OptimalRouteResult] (서울숲)[v:InputStation] (분당선)[v:InputLine] 찾아줘")
+  plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
+  last-modified (1572585897482)
+}

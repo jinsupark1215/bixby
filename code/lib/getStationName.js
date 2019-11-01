@@ -1,4 +1,5 @@
 var stations = require('../json/stationID');
+var lines = require('../json/subwayID');
 var console = require('console')
 
 module.exports.getStationName= function(stationName) {
@@ -14,5 +15,14 @@ module.exports.getStationName= function(stationName) {
 } 
 
 module.exports.getLineNum = function(inputLine) {
+  var lineNum = "";
   
+  lines.subwayID.forEach( function(line) {
+    var str = line.subwayName+"";
+    if(str == inputLine) {
+      lineNum = line.subwayID;
+    }
+  })
+
+  return lineNum;
 }

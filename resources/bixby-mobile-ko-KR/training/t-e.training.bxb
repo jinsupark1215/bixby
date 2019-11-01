@@ -1,5 +1,5 @@
 train (t-ebco7wy7t0u8ng6yystzn8ax5) {
-  utterance ("[g:OptimalRouteResult] (굽은다리역)[v:InputStation] (5)[v:InputLine]호선")
+  utterance ("[g:OptimalRouteResult] (굽은다리역)[v:InputStation] (5호선)[v:InputLine]")
   plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
-  last-modified (1572576867868)
+  last-modified (1572585900674)
 }

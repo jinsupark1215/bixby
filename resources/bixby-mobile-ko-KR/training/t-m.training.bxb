@@ -1,5 +1,5 @@
 train (t-mh9qgxdqz92v00h1qafn3vekk) {
-  utterance ("[g:OptimalRouteResult] (천호역)[v:InputStation] (5)[v:InputLine]호선")
+  utterance ("[g:OptimalRouteResult] (천호역)[v:InputStation] (5호선)[v:InputLine]")
   plan (Y2BlUC4uTkyrNCwuMU9KzNNLzEnX8y8oycxNzAnKLy1JDUotLs0pYVDBUJRaUZCTmJmHrJZBCkOVZ15BaYlPZl4qgyx2ueCSxJLM/DwGGQzp4PzSouTUgPzMvBIGFgZGBiYGZiDNAGRBIAwwAzFIjgEA)
-  last-modified (1572576808160)
+  last-modified (1572585902197)
 }

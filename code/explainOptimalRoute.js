@@ -41,19 +41,22 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   }
   var arrivalInfos =[];
   var obj = {}
-
-  var lineNum = getStationName.getLineNum(inputLine)
-
+  var lineNum = convertStation.getLineNum(inputLine)
+  console.log(lineNum)
   for(var key in realtimeArrivalList){
     var nowTime = new Date();
     nowTime.setHours(nowTime.getHours()+9);
-    if(realtimeArrivalList[key].subwayId-1000!=inputLine) continue;
-    var timeLeft = getArrivalTime.getRemainingTime(realtimeArrivalList[key]);
-    
-    nowTime.setMinutes(nowTime.getMinutes()+ parseInt(realtimeArrivalList[key].barvlDt/60));
-    // console.log("curTime",nowTime);
-
-    var arrivalTime = nowTime.getHours()+"시 "+nowTime.getMinutes()+"분";
+    if(realtimeArrivalList[key].subwayId!=lineNum) continue;
+    var timeLeft = getArrivalTime.getRemainingTime(realtimeArrivalList[key]) + "";
+    var arrivalTime = ""
+    if(!timeLeft.match("초 후 도착")){
+      inputStation= inputStation.substring(0,inputStation.length-1);
+    }
+    else {
+      nowTime.setMinutes(nowTime.getMinutes()+ parseInt(realtimeArrivalList[key].barvlDt/60));
+      // console.log("curTime",nowTime);
+      arrivalTime = nowTime.getHours()+"시 "+nowTime.getMinutes()+"분";
+    }
     
     var arrivalColor;
     
