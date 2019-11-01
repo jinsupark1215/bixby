@@ -27,7 +27,7 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   var input = convertStation.getStationName(inputStation);
   
   var stationInfo = tool.getSubwayInfo(input);
-  console.log("stationInfo",stationInfo);
+  // console.log("stationInfo",stationInfo);
   var realtimeArrivalList=[];
   realtimeArrivalList= stationInfo.realtimeArrivalList;
   var d= new Date();
@@ -73,6 +73,7 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
       nextStation: nextStation,
       arrivalTimeLeft: timeLeft
     };
+    console.log("가져온 정보",realtimeArrivalList[key])
     arrivalInfos.push(obj);
 
   }

@@ -10,6 +10,6 @@ module.exports.getRemainingTime= function(key) {
   else {
     remainTime = parseInt(key.barvlDt/60) + "분 " + key.barvlDt%60 +"초 후 도착"
   }
-    console.log('getStationLeftTime', remainTime)
+    // console.log('key', key)
   return remainTime
 }
