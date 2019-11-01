@@ -37,7 +37,7 @@ layout-macro-def (StationDetail) {
                      single-line{
                        text{
                          style(Title_XS)
-                         value("#{value(optimal.station.arrivalInfo[0].arrivalTimeLeft)} 후 도착")
+                         value("#{value(optimal.station.arrivalInfo[0].arrivalTimeLeft)}")
                      }
                      }
                      single-line{
@@ -57,7 +57,7 @@ layout-macro-def (StationDetail) {
                      single-line{
                        text{
                          style(Title_XS)
-                         value("#{value(optimal.station.arrivalInfo[1].arrivalTimeLeft)} 후 도착")
+                         value("#{value(optimal.station.arrivalInfo[1].arrivalTimeLeft)}")
                      }
                      }
                      single-line{
@@ -109,7 +109,7 @@ layout-macro-def (StationDetail) {
                      single-line{
                        text{
                          style(Title_XS)
-                         value("#{value(optimal.station.arrivalInfo[2].arrivalTimeLeft)} 후 도착")
+                         value("#{value(optimal.station.arrivalInfo[2].arrivalTimeLeft)}")
                      }
                      }
                      single-line{
@@ -129,7 +129,7 @@ layout-macro-def (StationDetail) {
                      single-line{
                        text{
                          style(Title_XS)
-                         value("#{value(optimal.station.arrivalInfo[3].arrivalTimeLeft)} 후 도착")
+                         value("#{value(optimal.station.arrivalInfo[3].arrivalTimeLeft)}")
                      }
                      }
                      single-line{

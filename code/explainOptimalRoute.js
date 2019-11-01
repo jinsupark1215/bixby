@@ -1,5 +1,6 @@
 var tool = require("lib/apiTool.js")
 var console = require('console')
+var getArrivalTime = require("lib/getArrivalTime")
 
 
 
@@ -16,7 +17,7 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   }
 
   var result = tool.getInfo(startLocation.lng,startLocation.lat,destLocation.lng,destLocation.lat);
-  console.log("RESULT",result);
+  // console.log("RESULT",result);
 
   if(inputStation.charAt(inputStation.length-1)=="역"){
     inputStation= inputStation.substring(0,inputStation.length-1);
@@ -29,7 +30,7 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   var d= new Date();
   
   d.setHours(d.getHours()+9);
-  console.log("currentTime",d);
+  // console.log("currentTime",d);
   d.setMinutes(d.getMinutes()+parseInt(result.features[0].properties.totalTime/60));
   var routeInfo = {
     duration : parseInt(result.features[0].properties.totalTime/60)+"분",
@@ -41,14 +42,13 @@ module.exports.function = function explainOptimalRoute (inputLine, inputStation,
   for(var key in realtimeArrivalList){
     var nowTime = new Date();
     nowTime.setHours(nowTime.getHours()+9);
-    if(realtimeArrivalList[key].subwayId-1000!=inputLine)continue;
-    var timeLeft = parseInt(realtimeArrivalList[key].barvlDt/60) + "분 " + realtimeArrivalList[key].barvlDt%60 +"초";
+    if(realtimeArrivalList[key].subwayId-1000!=inputLine) continue;
+    var timeLeft = getArrivalTime.getRemainingTime(realtimeArrivalList[key]);
     
     nowTime.setMinutes(nowTime.getMinutes()+ parseInt(realtimeArrivalList[key].barvlDt/60));
-    nowTime.setSeconds(nowTime.getSeconds() + realtimeArrivalList[key].barvlDt%60);
-    console.log("curTime",nowTime);
-   
-    var arrivalTime = nowTime.getHours()+"시 "+nowTime.getMinutes()+"분 "+nowTime.getHours()+"초";
+    // console.log("curTime",nowTime);
+
+    var arrivalTime = nowTime.getHours()+"시 "+nowTime.getMinutes()+"분";
     
     var arrivalColor;
     

@@ -15,7 +15,7 @@ module.exports.getGiocode= function(addr) {
           }
         };
        var log= http.getUrl("https://maps.googleapis.com/maps/api/geocode/json",options); 
-       console.log("log",log);
+      //  console.log("log",log);
        return log    
 }
         
@@ -47,13 +47,13 @@ module.exports.getInfo=function(startX,startY,endX,endY) {
             endName : "도착지"
       };
     var log= http.postUrl("https://apis.openapi.sk.com/tmap/routes/pedestrian",body,options); 
-    console.log("log",log);
+    // console.log("log",log);
     return log   
 }      
 
 module.exports.getSubwayInfo=function(station){
     var enc = encodeURI(station);
     var log = http.getUrl("http://swopenapi.seoul.go.kr/api/subway/7a4e4c666c756c74333448716a7877/json/realtimeStationArrival/0/100/"+enc,{format:"json"});
-    console.log("log",log);
+    console.log("http://swopenapi.seoul.go.kr/api/subway/7a4e4c666c756c74333448716a7877/json/realtimeStationArrival/0/100/"+enc,{format:"json"});
     return log
 }
