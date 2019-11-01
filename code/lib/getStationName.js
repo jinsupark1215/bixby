@@ -12,3 +12,7 @@ module.exports.getStationName= function(stationName) {
   })
   return stationRealName;
 } 
+
+module.exports.getLineNum = function(inputLine) {
+  
+}
